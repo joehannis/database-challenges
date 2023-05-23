@@ -8,6 +8,6 @@ TRUNCATE TABLE albums RESTART IDENTITY; -- replace with your own table name.
 
 -- Below this line there should only be `INSERT` statements.
 -- Replace these statements with your own seed data.
-
-INSERT INTO albums (title, release_year, artist_id) VALUES ('Continuum', '2006', '3');
-INSERT INTO albums (title, release_year, artist_id) VALUES ('Madvillainy', '2004', '4');
+INSERT INTO albums (title, release_year, artist_id) VALUES ('Continuum', '2006', '4');
+INSERT INTO albums (title, release_year, artist_id) VALUES ('Madvillainy', '2004', '5');
+INSERT INTO albums (title, release_year, artist_id) VALUES ('Waterloo', '1972', '2');

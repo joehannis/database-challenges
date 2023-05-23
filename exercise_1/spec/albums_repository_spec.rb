@@ -13,10 +13,14 @@ RSpec.describe AlbumsRepository do
   it 'Returns a list of albums' do
     repo = AlbumsRepository.new
     albums = repo.all
-    expect(albums.length).to eq(2)
+    expect(albums.length).to eq(3)
     expect(albums.first.id).to eq('1')
     expect(albums.first.title).to eq "Continuum"
   end
-   
+  it 'Returns single album based on id' do
+    albums = AlbumsRepository.new
+    result = albums.find('3')
+    expect(result.first.title).to eq 'Waterloo'
+  end
 
 end
