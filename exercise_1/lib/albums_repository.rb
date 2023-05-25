@@ -1,7 +1,9 @@
 require_relative 'albums'
+require_relative 'database_connection'
 
 class AlbumsRepository
   def all
+    DatabaseConnection.connect('music_library_test')
     sql = 'SELECT id, title, release_year, artist_id FROM albums;'
     result_set = DatabaseConnection.exec_params(sql, [])
 
@@ -16,7 +18,7 @@ class AlbumsRepository
 
       albums << album
     end
-    return albums
+    albums
   end
   
   def find(id)

@@ -1,6 +1,6 @@
-require 'artist_repository'
+require 'artists_repository'
 
-RSpec.describe ArtistRepository do
+RSpec.describe ArtistsRepository do
   def reset_artists_table
     seed_sql = File.read('spec/seeds_artists.sql')
     connection = PG.connect({ host: '127.0.0.1', dbname: 'music_library_test' })
@@ -11,7 +11,7 @@ RSpec.describe ArtistRepository do
     reset_artists_table
   end
   it 'Returns a list of artists' do
-    repo = ArtistRepository.new
+    repo = ArtistsRepository.new
     artists = repo.all
     expect(artists.length).to eq(2)
     expect(artists.first.id).to eq('1')

@@ -1,5 +1,5 @@
 require_relative 'artist'
-class ArtistRepository
+class ArtistsRepository
   def all
     sql = 'SELECT id, name, genre FROM artists;'
     result_set = DatabaseConnection.exec_params(sql, [])
@@ -14,7 +14,7 @@ class ArtistRepository
 
       artists << artist
     end
-    return artists
+    p artists
   end
 end
   # Selecting all records

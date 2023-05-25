@@ -1,4 +1,4 @@
-require 'albums_repository'
+require_relative 'albums_repository'
 
 RSpec.describe AlbumsRepository do
   def reset_albums_table
